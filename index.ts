@@ -13,6 +13,11 @@ import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
 import {
+	loginOpenAICodex,
+	refreshOpenAICodexToken,
+	type OAuthCredentials,
+} from "@mariozechner/pi-ai/oauth";
+import {
 	type Api,
 	type AssistantMessage,
 	type AssistantMessageEvent,
@@ -21,10 +26,7 @@ import {
 	createAssistantMessageEventStream,
 	getApiProvider,
 	getModels,
-	loginOpenAICodex,
 	type Model,
-	type OAuthCredentials,
-	refreshOpenAICodexToken,
 	type SimpleStreamOptions,
 } from "@mariozechner/pi-ai";
 import type {
